@@ -13,7 +13,7 @@
     rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" crossorigin src="/vault-yx/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/vault-yx/assets/styles-Br-qp8Tx.css">
+    <link rel="stylesheet" crossorigin href="/vault-yx/assets/styles-hOeOef2L.css">
   </head>
   <body>
     <div class="grid-overlay"></div>
@@ -395,6 +395,76 @@
                         </p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact__grid">
+            <div class="contact__info scroll-reveal">
+                <h2 class="section-title">Готовы <span class="highlight">начать?</span></h2>
+                <p class="contact__text">
+                    Оставьте заявку на бесплатную консультацию. Наш эксперт свяжется с вами, чтобы обсудить стратегию
+                    роста на базе инноваций.
+                </p>
+
+                <div class="contact__details">
+                    <div class="contact__item">
+                        <div class="contact__icon"><i data-lucide="mail"></i></div>
+                        <div>
+                            <span>Пишите нам</span>
+                            <strong>support@vault-yx.blog</strong>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <div class="contact__icon"><i data-lucide="map-pin"></i></div>
+                        <div>
+                            <span>Офис во Франции</span>
+                            <strong>24 Rue de Rivoli, 75004 Paris</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact__form-wrapper scroll-reveal">
+                <form class="contact__form" id="ai-contact-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон (только цифры)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="33123456789" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Подтвердите, что вы не робот: <span id="captcha-question"></span></label>
+                        <input type="text" id="captcha-answer" placeholder="Ваш ответ" required>
+                    </div>
+
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="consent" required>
+                        <label for="consent">Я согласен с <a href="./personal-data-policy.html">политикой обработки
+                                данных</a></label>
+                    </div>
+
+                    <button type="submit" class="btn btn--submit">
+                        Отправить запрос
+                        <i data-lucide="send"></i>
+                    </button>
+
+                    <div class="form-success" id="form-message">
+                        <i data-lucide="check-circle"></i>
+                        <span>Запрос успешно отправлен! Ожидайте звонка.</span>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
