@@ -77,4 +77,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.scroll-reveal').forEach(el => {
         observer.observe(el);
     });
+    // FAQ Accordion
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const trigger = item.querySelector('.faq-item__trigger');
+        trigger.addEventListener('click', () => {
+            const isActive = item.classList.contains('faq-item--active');
+            
+            // Закрываем все остальные (опционально)
+            faqItems.forEach(i => i.classList.remove('faq-item--active'));
+            
+            if (!isActive) {
+                item.classList.add('faq-item--active');
+            }
+        });
+    });
 });

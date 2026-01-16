@@ -969,3 +969,159 @@ h4,
         /* Упрощаем на мобилках */
     }
 }
+/* ================= POSSIBILITIES ================= */
+.possibilities {
+    padding: 100px 0;
+    background: #fff;
+    border-top: var(--border-width) solid #000;
+}
+
+.possibilities__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.pos-card {
+    border: var(--border-width) solid #000;
+    box-shadow: 10px 10px 0 #000;
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+    background: #fff;
+}
+
+.pos-card--black {
+    background: #000;
+    color: #fff;
+}
+
+.pos-card--black .pos-card__footer {
+    border-top: var(--border-width) solid #fff;
+    background: #000;
+    color: var(--accent-color);
+}
+
+.pos-card__content {
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.pos-card__content h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.pos-card__footer {
+    padding: 15px 30px;
+    border-top: var(--border-width) solid #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: var(--accent-color);
+}
+
+/* ================= ROADMAP ================= */
+.roadmap {
+    padding: 100px 0;
+}
+
+.roadmap__box {
+    background: var(--secondary-color);
+    padding: 60px;
+    border: var(--border-width) solid #000;
+    box-shadow: 15px 15px 0 var(--accent-color);
+    color: #fff;
+}
+
+.roadmap__list {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.step {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border: 2px solid #fff;
+}
+
+.step__num {
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Space Grotesk';
+    color: var(--accent-color);
+}
+
+.step h4 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+/* ================= FAQ ================= */
+.faq {
+    padding: 100px 0;
+    background: #f0f0f0;
+    border-top: var(--border-width) solid #000;
+}
+
+.faq__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+}
+
+.faq-item {
+    background: #fff;
+    border: var(--border-width) solid #000;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 0 #000;
+}
+
+.faq-item__trigger {
+    width: 100%;
+    padding: 25px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-item__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 0 25px;
+}
+
+.faq-item--active .faq-item__content {
+    padding-bottom: 25px;
+    max-height: 200px;
+}
+
+.faq-item--active i {
+    transform: rotate(45deg);
+    color: var(--secondary-color);
+}
+
+@media (max-width: 992px) {
+
+    .possibilities__grid,
+    .faq__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .roadmap__box {
+        padding: 30px;
+    }
+}
