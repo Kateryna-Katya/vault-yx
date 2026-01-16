@@ -13,33 +13,51 @@
     rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" crossorigin src="/vault-yx/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/vault-yx/assets/styles-hOeOef2L.css">
+    <link rel="stylesheet" crossorigin href="/vault-yx/assets/styles-CGWQfBQ8.css">
   </head>
   <body>
     <div class="grid-overlay"></div>
     <header class="header">
   <div class="container header__container">
-    <a href="/" class="logo">
+    <a href="./#hero" class="logo">
       Vault-<span class="logo__accent">YX</span>
     </a>
     <nav class="nav">
       <ul class="nav__list">
-        <li><a href="#" class="nav__link">Главная</a></li>
-        <li><a href="#features" class="nav__link">Технологии</a></li>
-        <li><a href="#possibilities" class="nav__link">Возможности</a></li>
-        <li><a href="#education" class="nav__link">Обучение</a></li>
-        <li><a href="#faq" class="nav__link">Вопросы</a></li>
+        <li><a href="./#hero" class="nav__link">Главная</a></li>
+        <li><a href="./#features" class="nav__link">Технологии</a></li>
+        <li><a href="./#possibilities" class="nav__link">Возможности</a></li>
+        <li><a href="./#education" class="nav__link">Обучение</a></li>
+        <li><a href="./#faq" class="nav__link">Вопросы</a></li>
       </ul>
     </nav>
-    <a href="#contact" class="btn btn--header">
+    <a href="./#contact" class="btn btn--header">
       Связаться
       <i data-lucide="arrow-up-right"></i>
     </a>
-    <button class="burger" aria-label="Menu">
-      <span></span>
-    </button>
+<button class="burger" id="burger-open" aria-label="Open Menu">
+  <span></span><span></span><span></span>
+</button>
   </div>
 </header>
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu__header">
+    <div class="logo">Vault-<span class="logo__accent">YX</span></div>
+<button class="burger burger--close" id="menu-close">
+  <span></span><span></span>
+</button>
+  </div>
+  <nav class="mobile-nav">
+    <ul class="mobile-nav__list">
+      <li><a href="./#hero" class="mobile-nav__link">Главная</a></li>
+      <li><a href="./#features" class="mobile-nav__link">Технологии</a></li>
+      <li><a href="./#possibilities" class="mobile-nav__link">Возможности</a></li>
+      <li><a href="./#education" class="mobile-nav__link">Обучение</a></li>
+      <li><a href="./#faq" class="mobile-nav__link">Вопросы</a></li>
+    </ul>
+    <a href="./#contact" class="btn btn--submit mobile-nav__btn">Начать сейчас</a>
+  </nav>
+</div>
 
     <main id="main-content">
       <!-- Loads the specified .html file -->
@@ -484,22 +502,22 @@
       <div class="footer__col">
         <h4 class="footer__title">Меню</h4>
         <ul class="footer__list">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#features">Технологии</a></li>
-          <li><a href="#possibilities">Возможности</a></li>
-          <li><a href="#education">Обучение</a></li>
+          <li><a href="./#hero">Главная</a></li>
+          <li><a href="./#features">Технологии</a></li>
+          <li><a href="./#possibilities">Возможности</a></li>
+          <li><a href="./#education">Обучение</a></li>
         </ul>
       </div>
 
       <div class="footer__col">
         <h4 class="footer__title">Юридическая информация</h4>
         <ul class="footer__list">
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="cookies.html">Cookie Policy</a></li>
-          <li><a href="terms.html">Terms of Service</a></li>
-          <li><a href="return.html">Return Policy</a></li>
-          <li><a href="disclaimer.html">Disclaimer</a></li>
-          <li><a href="personal-data-policy.html">Personal Data</a></li>
+          <li><a href="./privacy.html">Privacy Policy</a></li>
+          <li><a href="./cookies.html">Cookie Policy</a></li>
+          <li><a href="./terms.html">Terms of Service</a></li>
+          <li><a href="./return.html">Return Policy</a></li>
+          <li><a href="./disclaimer.html">Disclaimer</a></li>
+          <li><a href="./personal-data-policy.html">Personal Data</a></li>
         </ul>
       </div>
 
@@ -527,6 +545,16 @@
     </div>
   </div>
 </footer>
-
+<div class="cookie-popup" id="cookie-popup">
+  <div class="cookie-popup__content">
+    <div class="cookie-popup__icon">
+      <i data-lucide="cookie"></i>
+    </div>
+    <p class="cookie-popup__text">
+      Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie политике</a>.
+    </p>
+    <button class="btn btn--cookie" id="cookie-accept">ОК</button>
+  </div>
+</div>
   </body>
 </html>
