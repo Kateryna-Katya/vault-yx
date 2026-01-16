@@ -441,3 +441,135 @@ h4,
         gap: 20px;
     }
 }
+/* ================= ABOUT SECTION ================= */
+.about {
+    padding: 100px 0;
+    border-top: var(--border-width) solid var(--text-color);
+    background-color: #fff;
+}
+
+.about__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border: 2px solid var(--text-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 0 var(--text-color);
+}
+
+.about__title {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 30px;
+}
+
+.text-underline {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 8px;
+    text-underline-offset: 4px;
+}
+
+.about__lead {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.about__stats {
+    display: flex;
+    gap: 40px;
+}
+
+.stat-item__value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    -webkit-text-stroke: 1.5px var(--text-color);
+}
+
+.stat-item__label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* Карточки */
+.about__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-card {
+    padding: 40px;
+    border: var(--border-width) solid var(--text-color);
+    box-shadow: 10px 10px 0 var(--text-color);
+    transition: var(--transition);
+    position: relative;
+}
+
+.info-card--violet {
+    background-color: #f3ebff;
+}
+
+.info-card--green {
+    background-color: #e6ffed;
+}
+
+.info-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 15px 15px 0 var(--text-color);
+}
+
+.info-card__icon {
+    width: 60px;
+    height: 60px;
+    border: var(--border-width) solid var(--text-color);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.info-card__title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Animation trigger class */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.scroll-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Адаптив */
+@media (max-width: 992px) {
+    .about__grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .about__title {
+        font-size: 2.2rem;
+    }
+}
