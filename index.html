@@ -1,56 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vault-yx/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vault-YX | Практики применения ИИ для каждого</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;700&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" crossorigin src="/vault-yx/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/vault-yx/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/vault-yx/assets/styles-DHTmH2sX.css">
   </head>
   <body>
+    <div class="grid-overlay"></div>
     <header class="header">
-  <div class="container">
+  <div class="container header__container">
+    <a href="/" class="logo">
+      Vault-<span class="logo__accent">YX</span>
+    </a>
     <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+      <ul class="nav__list">
+        <li><a href="#" class="nav__link">Главная</a></li>
+        <li><a href="#features" class="nav__link">Технологии</a></li>
+        <li><a href="#possibilities" class="nav__link">Возможности</a></li>
+        <li><a href="#education" class="nav__link">Обучение</a></li>
+        <li><a href="#faq" class="nav__link">Вопросы</a></li>
       </ul>
     </nav>
+    <a href="#contact" class="btn btn--header">
+      Связаться
+      <i data-lucide="arrow-up-right"></i>
+    </a>
+    <button class="burger" aria-label="Menu">
+      <span></span>
+    </button>
   </div>
 </header>
 
-
-    <main>
+    <main id="main-content">
       <!-- Loads the specified .html file -->
       
     </main>
 
     <footer class="footer">
   <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <div class="logo logo--footer">Vault-YX</div>
+        <p class="footer__description">
+          Инновационные решения, которые меняют правила игры. AI-инструменты для реальных задач, доступные каждому.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Меню</h4>
+        <ul class="footer__list">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#features">Технологии</a></li>
+          <li><a href="#possibilities">Возможности</a></li>
+          <li><a href="#education">Обучение</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Юридическая информация</h4>
+        <ul class="footer__list">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="return.html">Return Policy</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="personal-data-policy.html">Personal Data</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__title">Контакты</h4>
+        <ul class="footer__contact-info">
+          <li>
+            <i data-lucide="phone"></i>
+            <a href="tel:+33142618211">+33 1 42 61 82 11</a>
+          </li>
+          <li>
+            <i data-lucide="mail"></i>
+            <a href="mailto:support@vault-yx.blog">support@vault-yx.blog</a>
+          </li>
+          <li>
+            <i data-lucide="map-pin"></i>
+            <span>24 Rue de Rivoli, 75004 Paris, France</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2026 Vault-YX. Платформа года. Все права защищены.</p>
+    </div>
   </div>
 </footer>
-
 
   </body>
 </html>
