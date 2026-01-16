@@ -1427,3 +1427,71 @@ h4,
     padding: 10px 25px;
     box-shadow: 4px 4px 0 #000;
 }
+/* ================= LEGAL PAGES STYLES ================= */
+.legal-page {
+    padding: 120px 0 80px;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border: var(--border-width) solid #000;
+    box-shadow: 15px 15px 0 #000;
+    background: #fff;
+}
+
+.legal-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    background: var(--accent-color);
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px solid #000;
+}
+
+.legal-page h2 {
+    font-size: 1.5rem;
+    margin: 30px 0 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+}
+
+.legal-page p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.legal-page ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.legal-page li {
+    margin-bottom: 10px;
+    position: relative;
+    list-style: none;
+}
+
+.legal-page li::before {
+    content: "→";
+    position: absolute;
+    left: -25px;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.legal-back-link {
+    display: inline-flex;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--accent-color);
+}
