@@ -93,4 +93,56 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // --- Логика формы Контактов ---
+
+    const contactForm = document.getElementById('ai-contact-form');
+    const phoneInput = document.getElementById('phone');
+    const captchaLabel = document.getElementById('captcha-question');
+    const captchaInput = document.getElementById('captcha-answer');
+    const formMessage = document.getElementById('form-message');
+
+    // Генерируем капчу
+    let num1 = Math.floor(Math.random() * 10) + 1;
+    let num2 = Math.floor(Math.random() * 10) + 1;
+    let captchaResult = num1 + num2;
+    if (captchaLabel) {
+        captchaLabel.innerText = `${num1} + ${num2} = ?`;
+    }
+
+    // Валидация телефона (только цифры)
+    phoneInput.addEventListener('input', (e) => {
+        e.target.value = e.target.value.replace(/[^0-9]/g, '');
+    });
+
+    // Обработка отправки (имитация AJAX)
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Проверка капчи
+            if (parseInt(captchaInput.value) !== captchaResult) {
+                alert('Ошибка капчи! Попробуйте снова.');
+                return;
+            }
+
+            // Имитация загрузки
+            const submitBtn = contactForm.querySelector('.btn--submit');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Отправка...';
+
+            setTimeout(() => {
+                // Показываем сообщение об успехе
+                formMessage.style.display = 'flex';
+                contactForm.reset();
+                
+                // Скрываем через 5 секунд (опционально)
+                setTimeout(() => {
+                    formMessage.style.display = 'none';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }, 5000);
+            }, 1500);
+        });
+    }
 });
